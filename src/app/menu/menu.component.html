@@ -1,0 +1,159 @@
+
+ <!--nav id="navid" class="navbar navbar-inverse bg-inverse navbar-toggleable-md"> 
+
+   <a class="navbar-brand ms-margin-left-percent" href="#">Ngb-Laravel</a>
+  <button class="navbar-toggler navbar-toggler-right hidden-lg-up ms-margin-right-percent" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarsExampleCenteredNav" aria-controls="navbarsExampleCenteredNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>    
+  </button>
+
+   
+
+  <div class="collapse navbar-collapse ms-margin-left-percent" id="navbarsExampleCenteredNav" [ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">       
+      <li class="nav-item" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link"  pageScroll  [routerLink]="['/#home']" class="nav-link" href="#home">Home </a>
+      </li>
+      
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+        <a pageScroll  [routerLink]="['/#Application']" class="nav-link" href="#Application">Application</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+        <a pageScroll [routerLink]="['/#Service']" class="nav-link" href="#Service">Our Features</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+        <a pageScroll [routerLink]="['/#contactus']" class="nav-link" href="#contactus">Contact Us</a>
+      </li>
+      <li class="nav-item"  role="presentation" routerLinkActive="active">
+        <a class="nav-link" routerLink="/angular-doc">Angular Doc</a>
+      </li>
+      <li class="nav-item"  role="presentation" routerLinkActive="active">
+        <a class="nav-link" routerLink="/laravel-doc">Laravel Doc</a>
+      </li>
+                      
+    </ul>
+
+    <ul class="navbar-nav ms-margin-right-percent">
+      <li class="nav-item"  role="presentation" routerLinkActive="active">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item"  role="presentation" routerLinkActive="active">
+        <a class="nav-link" routerLink="/signup">Signup</a>
+      </li>
+    </ul>
+    
+    </div>
+ 
+  </nav-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Ngb-Laravel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link"  pageScroll  [routerLink]="['/#home']" class="nav-link" href="#home">Home </a>
+        </li>
+        
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+          <a pageScroll  [routerLink]="['/#Application']" class="nav-link" href="#Application">Application</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+          <a pageScroll [routerLink]="['/#Service']" class="nav-link" href="#Service">Our Features</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+          <a pageScroll [routerLink]="['/#contactus']" class="nav-link" href="#contactus">Contact Us</a>
+        </li>
+        <li class="nav-item"  role="presentation" routerLinkActive="active">
+          <a class="nav-link" routerLink="/angular-doc">Angular Doc</a>
+        </li>
+        <li class="nav-item"  role="presentation" routerLinkActive="active">
+          <a class="nav-link" routerLink="/laravel-doc">Laravel Doc</a>
+        </li>  
+      </ul>
+
+      <ul class="navbar-nav ms-margin-right-percent">
+        <li class="nav-item"  role="presentation" routerLinkActive="active">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item"  role="presentation" routerLinkActive="active">
+          <a class="nav-link" routerLink="/signup">Signup</a>
+        </li>
+      </ul>
+    </div>
+  </nav-->
+
+
+
+  <div class="bd-example">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand ms-margin-left-percent" href="#">Ngb-Laravel</a>
+      <button class="navbar-toggler navbar-toggler-right hidden-lg-up ms-margin-right-percent" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarsExampleCenteredNav" aria-controls="navbarsExampleCenteredNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>    
+      </button>
+    
+      <div class="collapse navbar-collapse mt-2" id="navbarSupportedContent" [ngbCollapse]="!isCollapsed">
+        <!-- <div class="collapse navbar-collapse navbar-toggleable-xs" [ngbCollapse]="isCollapsed"> -->
+        <ul class="navbar-nav mr-auto ml-3">
+          <li class="nav-item" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link"  pageScroll  [routerLink]="['/#home']" class="nav-link" href="#home">Home </a>
+          </li>
+          
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+            <a pageScroll  [routerLink]="['/#Application']" class="nav-link" href="#Application">Application</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+            <a pageScroll [routerLink]="['/#Service']" class="nav-link" href="#Service">Our Features</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" role="presentation" routerLinkActive="active">
+            <a pageScroll [routerLink]="['/#contactus']" class="nav-link" href="#contactus">Contact Us</a>
+          </li>
+          <li class="nav-item"  role="presentation" routerLinkActive="active">
+            <a class="nav-link" routerLink="/angular-doc">Angular Doc</a>
+          </li>
+          <li class="nav-item"  role="presentation" routerLinkActive="active">
+            <a class="nav-link" routerLink="/laravel-doc">Laravel Doc</a>
+          </li>  
+        </ul>
+        <ul class="navbar-nav ms-margin-right-percent  ml-3">
+          <li class="nav-item"  role="presentation" routerLinkActive="active">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item"  role="presentation" routerLinkActive="active">
+            <a class="nav-link" routerLink="/signup">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+

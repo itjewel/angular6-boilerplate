@@ -1,0 +1,85 @@
+@background_color_1: #6c757d;
+@background-color_2:rgb(78, 178, 210);
+@color_1: #35A7CC;
+@color_2: #FFFFFF;
+@background_color_2: #40c4ff;
+@background_color_3: #FFFFFF;
+@background_color_4:rgba(53, 167, 204, 0.88);
+
+
+
+@media only screen and(max-width:768px ){
+.navbar-collapse {
+    background: @background_color_1 ;
+    width:100%;
+}
+.navbar-toggler {
+	font-size: 1.10rem;
+}
+}
+.ms-margin-left-percent{margin-left:2%;}
+.ms-margin-right-percent{margin-right:2%;}
+
+.nav-pills {
+	.nav-item.show {
+		.nav-link {
+			color: @color_1;
+			cursor: default;
+			background-color: @background_color_3;
+			color: @color_2;
+			cursor: default;
+		
+			
+		}
+	}
+	.nav-link.active {
+		color: @color_1;
+		cursor: default;
+		background-color: @background_color_3;
+	}
+	.nav-link {
+		color: @color_2;
+		cursor: default;
+	}
+}
+
+
+.nav {
+	>ul {
+		>li {
+			>a {
+				&:focus {
+					text-decoration: none;
+					background: @background_color_4;
+					color: @color_2;
+					color: @color_1;
+					cursor: default;
+					background-color: @background_color_3;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	>li {
+		>a {
+			&:hover {
+				text-decoration: none;
+				background: @background_color_4;
+				color: @color_2;
+				cursor: pointer;
+			}
+			&:hover.active {
+				color: @color_1;
+				cursor: default;
+				background-color: @background_color_3;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+<div class="col-lg-12">
+    <h1 class="page-header">
+       Dashboard 
+        <div class="pull-right">
+           <span style="font-size:15px;"><a active>Dashboard</a></span>
+        </div>
+    </h1>
+</div>
+
+<div class="row">
+<div class="col-md-3">
+<div class="card"> 
+  <div class="card-block card-body">
+    <div class="col-md-4 row pull-left">
+      <i class="fa fa-users" aria-hidden="true"></i>
+    </div>
+    <div class="col-md-8 pull-right ">
+      <h6 class="card-title row">TOTAL USERS</h6>
+      <p class="card-text"><strong>{{report?.totalUsers}}</strong></p>  
+    </div> 
+  </div>
+  <div class="card-footer text-muted card-body">   
+    <a href="">
+      <span class="pull-left">View All Users</span>
+      <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+      <div class="clearfix"></div> 
+    </a>
+  </div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card"> 
+  <div class="card-block card-body">
+    <div class="col-md-4 row pull-left">
+      <i class="fa fa-user-plus fa-5x"></i>
+    </div>
+    <div class="col-8 pull-right">
+      <h6 class="card-title row">NEW USERS THIS MONTH</h6>
+     <p class="card-text"><strong>{{report?.toalUsersByMonth}}</strong></p>  
+    </div> 
+  </div>
+  <div class="card-footer text-muted card-body">   
+    <a href="">
+      <span class="pull-left">View Users</span>
+      <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+      <div class="clearfix"></div> 
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card"> 
+  <div class="card-block  card-body">
+    <div class="col-md-4 row pull-left">
+      <i class="fa fa-user-times fa-5x"></i>
+    </div>
+    <div class="col-8 pull-right">
+      <h6 class="card-title row">BANNED USERS</h6>
+      <p class="card-text"><strong>{{report?.bannedUsers}}</strong></p>   
+    </div> 
+  </div>
+  <div class="card-footer text-muted  card-body">   
+    <a href="">
+      <span class="pull-left">View Details</span>
+      <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+      <div class="clearfix"></div> 
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card"> 
+  <div class="card-block primary  card-body">
+    <div class="col-md-4 row pull-left">
+      <i class="fa fa-user" aria-hidden="true"></i>
+    </div>
+    <div class="col-8 pull-right">
+      <h6 class="card-title row">UNCONFIRMED USERS</h6>
+      <p class="card-text"><strong>{{report?.unconfirmedUsers}}</strong></p>  
+    </div> 
+  </div>
+  <div class="card-footer text-muted  card-body">   
+    <a href="">
+      <span class="pull-left">View All Users</span>
+      <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+      <div class="clearfix"></div> 
+    </a>
+  </div>
+</div>
+</div>
+</div>
+
+<br/><br/>
+<div class="row">
+  <div class="col-md-8">
+      <div class="card">
+        <h6 class="card-header">Registration Graph</h6>
+        <div class="card-block  card-body">
+
+            <h4> New Registration History</h4>
+            <!--div height="400" id="line_chart" [chartData]="line_ChartData" [chartOptions]= "line_ChartOptions" chartType="LineChart" GoogleChart></div-->
+            <div id="lineChart" height="400"></div>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+     <div class="card ">
+        <h6 class="card-header">Latest Users</h6>
+        <div class="card-block  card-body">
+            <ul class="list-group list-group-dividered list-group-full">
+              
+                <li class="list-group-item row" *ngFor="let key of usersdata">
+              
+                    <div class="media-body row">
+                      <div class="col-6">
+                      <a href="#"><span><strong>{{key.first_name}} {{key.last_name}} </strong></span></a>
+                      </div>	
+                      <div class="col-6 pull-right">
+                      <em class="badge text-info">
+                          {{key.email}}
+                      </em>
+                      </div>                          
+                    </div>
+
+                </li>
+
+              
+                
+            </ul>	 
+
+          
+        </div>
+      </div>
+  </div>
+
+</div>

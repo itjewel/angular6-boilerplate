@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+<div class="container">
+	
+	<br/>
+	<div class="row justify-content-center">
+		
+
+	<div class="col-md-6"><br/><br/><br/><br/>
+    <div class="col-lg-12">
+				<p *ngFor="let alert of alerts ">
+					<ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+				</p>
+		</div>
+		<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" >
+
+			<div class="row">
+				<div class="form-group col-sm-6">
+						<input formControlName="first_name" type="text" class="form-control" id="first_name" placeholder="Enter your first name" name="first_name" ngModel>
+		     		<div class="alert text-danger" *ngIf="!form.controls['first_name'].valid && form.controls['first_name'].touched">This Field is Required</div>									
+			  </div>
+
+				<div class="form-group col-sm-6">					
+						<input formControlName="last_name" type="text" class="form-control" id="last_name" placeholder="Enter your last name" name="last_name" ngModel>
+				<div class="alert text-danger" *ngIf="!form.controls['last_name'].valid && form.controls['last_name'].touched">This Field is Required</div>				
+			  </div>			  
+			</div>
+
+	
+      <div class="form-group">
+			  <!--<label for="email">Email:</label>-->
+			  <input formControlName="email" type="email" class="form-control" id="email" placeholder="Enter email" name="email" ngModel >
+				<div class="alert text-danger" *ngIf="!form.controls['email'].valid && form.controls['email'].touched">This Field is Required && Valid Email.</div>
+			</div>
+			<div class="form-group">
+			  <!--<label for="pwd">Password:</label>-->
+			  <input formControlName="password" type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" ngModel>
+					<div class="alert text-danger" *ngIf="!form.controls['password'].valid && form.controls['password'].touched">This Field is Required and minimum length 6</div>
+			</div>
+			<div class="checkbox">
+			  <label><input type="checkbox" name="remember"> Remember me </label>
+			</div>
+			<button type="submit" [disabled]="!form.valid" class="btn btn-primary  btn-block"> <i class="fa fa-user-plus"></i> Create user</button>
+			<br/><br/><br/>
+		</form>
+	</div>
+</div>
+
+</div>
+<br/><br/><br/><br/><br/>
+<app-footer></app-footer>

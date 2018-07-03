@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ngb-Laravel</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    /*loader 2*/
+    .loader2 {
+      position:absolute;
+      top:10rem;
+      left:50%;
+      transform:translateX(-50%);
+    }
+    .loader2  span {
+      display:inline-block;
+      height:15px;
+      width:15px;
+      border-radius:50%;
+      animation:bounce 1s ease-in infinite;
+    }
+    .loader2 span:first-child {
+      background:aqua;
+      animation-delay:.7s;
+    }
+    .loader2 span:nth-child(2) {
+      background:green;
+      animation-delay:.3s;
+    }
+    .loader2 span:last-child {
+    background:tomato;
+    }
+    @keyframes bounce {
+      0%{
+        transform:translateY(0);
+      }
+      30%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(1rem);
+      }
+      100%{
+        transform:translateY(0);
+      }
+    }
+  </style>
+  <noscript>
+    <h3 style="color: #673ab7; font-family: Helvetica; margin: 2rem;">
+        Sorry, but app is not available without javascript
+    </h3>
+  </noscript>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+  <app-root>
+    <div class="loader2" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </app-root>
+</body>
+</html>

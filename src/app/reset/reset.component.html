@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+<div class="container">
+<div class="row justify-content-center">
+	<div class="col-md-4"><br/><br/><br/><br/><br/>	
+
+				<form [formGroup]="resetForm" (ngSubmit)="ngSubmit(resetForm.value)">
+			<div class="form-group">
+					<p *ngFor="let alert of alerts ">
+						<ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+					</p>
+			</div>	
+      <div class="form-group">
+				<input type="email" class="form-control"  formControlName="email" id="email" placeholder="Enter email" name="email" ngModel required>
+					<div class="alert text-danger" *ngIf="!resetForm.controls['email'].valid && resetForm.controls['email'].touched">This Field is Required && Valid Email.</div>	
+			</div>
+
+      <div class="form-group">
+      <label class="control-label" for="inputBasicPassword"> Password <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password" name="password" required>
+        <div class="alert text-danger" *ngIf="!resetForm.controls['password'].valid && resetForm.controls['password'].touched">This Field is Required.</div>
+      </div>
+      <div class="form-group">
+      <label class="control-label" for="inputBasicPassword">Confirm Password <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" name="password_confirmation" formControlName="password_confirmation" placeholder="Confirm Password" match-password="password">
+        
+      <div class='alert text-danger' *ngIf="resetForm.controls.password_confirmation.touched && resetForm.hasError('mismatchedPasswords')">
+            Passwords doesn't match.
+        </div>
+      </div>
+
+
+			<button type="submit" [disabled]="!resetForm.valid"  class="btn btn-primary btn-block"><i class="fa fa-sign-in" aria-hidden="true"></i> Reset Password</button>
+			
+		</form>
+
+			<br/><br/><br/>
+	</div>
+</div>
+</div>
+<app-footer></app-footer>
+
+
+

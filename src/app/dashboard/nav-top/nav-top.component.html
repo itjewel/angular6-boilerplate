@@ -1,0 +1,61 @@
+
+<nav class="navbar navbar-expand-lg navbar-inverse fixed-top ms-head-left navbar-light">
+  <a class="navbar-brand" routerLink="/dashboard">Dashboard</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" aria-controls="navbarsExampleDefault"
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+<div class="collapse navbar-collapse navbar-toggleable-xs" [ngbCollapse]="isCollapsed">
+  <ul class="navbar-nav mr-auto"></ul>
+
+  <div class="mt-2 mt-md-0 ms-mediascreen">
+    <ul class="nav nav-pills flex-column ms-nav  ms-nav-top hidden-md-up">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard/users" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="fa fa-users" aria-hidden="true"></i> Users</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard/users/create">
+          <i class="fa fa-user-plus" aria-hidden="true"></i> Add user</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard/logout" (click)="logout()">
+          <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+<ul class="nav nav-pills flex-column ms-nav  ms-nav-top hidden-md-up ms-mediascreenhidden">
+  <li ngbDropdown class="nav-item dropdown">
+    <button ngbDropdownToggle class="btn btn-outline-info text-white" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      {{user?.user.first_name}} {{user?.user.last_name}}
+    </button>
+    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <button class="dropdown-item" (click)="logout()">
+        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+
+    </div>
+  </li>
+</ul>
+
+</div>
+
+</nav>
+
+
+
+
+
+    
+
+    

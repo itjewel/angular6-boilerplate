@@ -1,0 +1,129 @@
+
+<div class="col-lg-12">
+    <h1 class="page-header">
+       Edit User
+        <div class="pull-right">
+           <span style="font-size:15px;"><a routerLink="/dashboard">Dashboard</a> / <a routerLink="/dashboard/users">Users</a> / <a active> {{userData?.first_name}} {{userData?.last_name}} </a> </span>
+        </div>
+    </h1>
+</div>
+<div class="col-lg-12">
+<p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+</p>
+</div>
+
+<div class="container">
+	<form [formGroup]="ngForm" (ngSubmit)="ngSubmit()">
+		<div class="row row-lg">
+<div class="col-sm-8" style="border-right: 1px dotted #ddd;">
+	  <!-- Example Basic Form -->	              
+			<div class="row">
+			<div class="col-sm-12">
+			<h5>User Details</h5>
+			</div>
+			  <div class="form-group col-sm-6">
+				<label class="control-label" for="inputBasicFirstName">First name <span class="text-danger">*</span> </label>
+				<input type="text" class="form-control" id="first_name" placeholder="First name" formControlName="first_name">
+				
+				<div class="alert text-danger" *ngIf="!ngForm.controls['first_name'].valid && ngForm.controls['first_name'].touched">This Field is Required</div>
+				</div>
+
+			  <div class="form-group col-sm-6">
+				<label class="control-label" for="inputBasicLastName">Last name <span class="text-danger">*</span> </label>
+				<input type="text" class="form-control" id="last_name" placeholder="Last name" formControlName="last_name">
+			  <div class="alert text-danger" *ngIf="!ngForm.controls['last_name'].valid && ngForm.controls['last_name'].touched">This Field is Required and minimum length 3</div>
+				</div>
+			</div>
+			
+			<div class="row">			  
+			  
+			<div class="form-group col-sm-6">
+				<label class="control-label" for="inputBasicFirstName">Phone</label>
+				<input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="Phone" autocomplete="off">
+			   
+				</div>
+			   <!--div class="form-group col-sm-6">			  
+			  	<label class="control-label" for="inputBasicFirstName">Date of Birth <span class="text-danger">*</span></label>
+					<div class="form-group">
+								<div class="input-group">
+								<input class="form-control" formControlName="date_of_birth" placeholder="yyyy-mm-dd"
+												name="date_of_birth" ngbDatepicker #d="ngbDatepicker">
+								<div class="input-group-addon" (click)="d.toggle()" >
+										<img src="assets/images/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+								</div>
+								</div>
+						</div>
+							<div class="alert text-danger" *ngIf="!ngForm.controls['date_of_birth'].valid && ngForm.controls['date_of_birth'].touched">This Field is Required</div>
+				</div-->
+
+				<div class="form-group col-sm-6">
+					<label class="control-label">Gender <span class="text-danger">*</span></label>
+						<select class="form-control" formControlName="gender" name="gender" required="">
+								<option value="male">Male</option>	
+								<option value="female">Female</option>	
+								<option value="others">Others</option>	
+						</select>
+						
+				</div>
+
+			</div>
+            
+			<div class="row">
+				<div class="form-group col-sm-6">
+				<label class="control-label">Status <span class="text-danger">*</span></label>
+			<select class="form-control" formControlName="status" name="status" required="">
+				    <option value="active">Active</option>	
+							<option value="banned">Banned</option>	
+							<option value="unconfirmed">Unconfirmed</option>	
+					</select>					
+			  </div>
+
+				<div class="form-group col-sm-6">					
+						<label class="control-label" for="inputBasicFirstName">Address</label>
+			    	<input class="form-control" formControlName="address" id="address" name="address"  placeholder="Address" >
+			  </div>
+			  
+			</div>
+	  
+	</div>
+	<div class="col-sm-4">
+	  <!-- Example Basic Form Without Label -->
+	      <div class="col-sm-12 row">
+			<h5>Login Details</h5>
+			</div>          
+		<div class="form-group">
+		  <label class="control-label" for="inputBasicEmail">E-Mail Address <span class="text-danger">*</span></label>
+		  <input type="email" class="form-control" id="email" name="email" formControlName="email" placeholder="E-Mail Address" autocomplete="off">	
+		 	</div>
+		<div class="alert text-danger" *ngIf="!ngForm.controls['email'].valid && ngForm.controls['email'].touched && !emailExist">This Field is Required && Valid Email.</div>
+    <div class="alert text-danger" *ngIf="emailExist">Email Already Exists.</div>
+
+		<!--div class="form-group">
+		<label class="control-label" for="inputBasicPassword"> Password <span class="text-danger">*</span></label>
+			<input type="password" class="form-control" formControlName="password" placeholder="Password" name="password">
+			<div class="alert text-danger" *ngIf="!ngForm.controls['password'].valid && ngForm.controls['password'].touched">This Field is Required.</div>
+		</div>
+		{{ngForm.value.password | json}}
+		<div class="form-group">
+		<label class="control-label" for="inputBasicPassword">Confirm Password <span class="text-danger">*</span></label>
+			<input type="password" class="form-control" name="confirm_password" formControlName="confirm_password" placeholder="Confirm Password" match-password="password">
+			
+		</div-->
+
+	</div>
+	<div style="clear:both"></div>
+	<div class="form-group col-sm-6">
+	<button type="submit" [disabled]="!ngForm.valid" class="btn btn-primary ladda-button" data-plugin="ladda" data-style="expand-left" disabled="disabled"><span class="ladda-label">
+			<i class="fa fa-save"></i>  Create an account
+		<span class="ladda-spinner"></span><div class="ladda-progress" style="width: 0px;"></div>
+		</span><span class="ladda-spinner"></span></button>
+	
+	</div>
+  </div>
+	</form>
+
+</div>
+
+
+

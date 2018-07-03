@@ -1,0 +1,104 @@
+@color_1: #35A7CC;
+@color_2: #FFFFFF;
+@background_color_1: #35A7CC;
+@background_color_2: #40c4ff;
+@background_color_3: #FFFFFF;
+@background_color_4:rgba(53, 167, 204, 0.88);
+
+
+
+.ms-sidebar {
+	background-color: @background_color_2;
+}
+.sidebar {
+	position: fixed;
+	
+	bottom: 0;
+	left: 0;
+	top:0px;
+	z-index: 1000;
+	padding: 40px 0px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background:background_color_2;
+	border-right: 1px solid #FFFFFF;
+	.ms-nav-top{
+     margin-top: 51px;
+	}
+	
+}
+@media only screen and(max-width: 575px) {
+  .ms-sidebar{display:none;}
+}
+
+.sidebar[_ngcontent-c1] {
+	padding: 60px 0px 0px 0px;
+	.ms-nav-top{
+     margin-top: 51px;
+	}
+}
+.nav-pills {
+	.nav-item.show {
+		.nav-link {
+			color: @color_1;
+			cursor: default;
+			background-color: @background_color_3;
+			color: @color_2;
+			cursor: default;
+		}
+	}
+	.nav-link.active {
+		color: @color_1;
+		cursor: default;
+		background-color: @background_color_3;
+	}
+	.nav-link {
+		color: @color_2;
+		cursor: default;
+	}
+}
+.ms-nav {
+    i{
+        padding: 6px 5px;
+        font-size: 1.3em;    
+    }
+}
+
+
+
+
+
+.nav {
+	>ul {
+		>li {
+			>a {
+				&:focus {
+					text-decoration: none;
+					background: @background_color_4;
+					color: @color_2;
+					color: @color_1;
+					cursor: default;
+					background-color: @background_color_3;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	>li {
+		>a {
+			&:hover {
+				text-decoration: none;
+				background: @background_color_4;
+				color: @color_2;
+				cursor: pointer;
+			}
+			&:hover.active {
+				color: @color_1;
+				cursor: default;
+				background-color: @background_color_3;
+				cursor: pointer;
+			}
+		}
+	}
+}
+

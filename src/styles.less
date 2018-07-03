@@ -1,0 +1,67 @@
+
+/* You can add global styles to this file, and also import other style files */
+/*
+ * Base structure
+ */
+/* Move down content because we have a fixed navbar that is 50px tall */
+/*
+ * Typography
+ */
+/*
+ * Sidebar
+ */
+/* Sidebar navigation */
+/*
+ * Dashboard
+ */
+/* Placeholders */
+
+@header_background_color: rgba(53, 167, 204, 0.88) !important;
+h1 {
+	margin-bottom: 20px;
+	padding-bottom: 9px;
+	border-bottom: 1px solid #eee;
+}
+.sidebar {
+	position: fixed;
+	top: 51px;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	border-right: 1px solid #eee;
+	padding-left: 0;
+	padding-right: 0;
+	.nav {
+		margin-bottom: 20px;
+	}
+	.nav-item {
+		width: 100%;
+		&+.nav-item {
+			margin-left: 0;
+		}
+	}
+	.nav-link {
+		border-radius: 0;
+	}
+}
+.placeholders {
+	padding-bottom: 3rem;
+}
+.placeholder {
+	img {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+}
+
+
+.bg-inverse {
+    background-color: @header_background_color;
+}
+
+footer {
+    background: @header_background_color;
+}
